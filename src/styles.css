@@ -1,3 +1,9 @@
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+
+.font-pokemon{
+  font-family: "Pokemon";
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -6,6 +12,9 @@
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 50%;
-  background-color: rgb(255, 53, 53);
+  height: 100vh;
+  background-image: url("./assets/jpg/nature_day.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
