@@ -4,17 +4,30 @@
   font-family: "Pokemon";
 }
 
+.titre-pokemon{
+  color: rgb(4, 64, 159);
+  -webkit-text-stroke: 8px rgb(255,204,0);
+  letter-spacing: 13px;
+  font-size: 200px;
+}
+.sous-titre-pokemon{
+  letter-spacing: 3px;
+  font-size: 25px;
+}
+
 *{
   padding: 0;
   margin: 0;
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: hidden;
   height: 100vh;
   background-image: url("./assets/jpg/nature_day.jpg");
   background-repeat: no-repeat;
   background-position: center;
+
+}
+
+.fs-pokemon{
 
 }

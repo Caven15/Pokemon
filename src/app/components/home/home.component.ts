@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/other/Services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -7,15 +6,10 @@ import { ApiService } from 'src/app/other/Services/api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-
-
-  constructor(
-    private _pokeApi : ApiService
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this._pokeApi.loadAllFromApi()
+
   }
 
 
