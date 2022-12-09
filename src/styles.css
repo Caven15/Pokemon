@@ -10,6 +10,14 @@
   letter-spacing: 13px;
   font-size: 200px;
 }
+
+.titre-pokemon-menu{
+  color: rgb(4, 64, 159);
+  -webkit-text-stroke: 4px rgb(255,204,0);
+  letter-spacing: 7px;
+  font-size: 75px;
+}
+
 .sous-titre-pokemon{
   letter-spacing: 3px;
   font-size: 25px;

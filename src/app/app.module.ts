@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { StartComponent } from './components/start/start.component';
+import { PokedexComponent } from './components/pokedex/pokedex.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    StartComponent
+    StartComponent,
+    PokedexComponent
   ],
   imports: [
     BrowserModule,

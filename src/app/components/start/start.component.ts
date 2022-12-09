@@ -9,16 +9,11 @@ import { ApiService } from 'src/app/other/Services/api.service';
 })
 export class StartComponent implements OnInit {
 
-  constructor(
-    private _pokeApi : ApiService,
-    private _router : Router
-  ) { }
+  constructor(private _pokeApi : ApiService) { }
 
   ngOnInit(): void {
     this._pokeApi.loadAllFromApi()
   }
 
-  goToHome(){
-    this._router.navigate(['home'])
-  }
+
 }
