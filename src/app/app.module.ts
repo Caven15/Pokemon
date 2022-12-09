@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { StartComponent } from './components/start/start.component';
 import { PokedexComponent } from './components/pokedex/pokedex.component';
 import { PokedexItemComponent } from './components/pokedex-item/pokedex-item.component';
+import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PokedexItemComponent } from './components/pokedex-item/pokedex-item.com
     HomeComponent,
     StartComponent,
     PokedexComponent,
-    PokedexItemComponent
+    PokedexItemComponent,
+    PokedexDetailComponent
   ],
   imports: [
     BrowserModule,

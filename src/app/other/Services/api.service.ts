@@ -73,6 +73,10 @@ export class ApiService {
     }
   }
 
+  getOne(id : number){
+    return this.listePokemon[id]
+  }
+
   viewAllPokemon(){
     this.listePokemon.forEach(element => {
       console.log(`${element.Id} : ${element.Nom}`)
