@@ -1,1 +1,16 @@
-<p>pokedex works!</p>
+
+<div class="vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-1 d-flex justify-content-center">
+        <button [disabled]="compteurPokemonMin <= 0" (click)="selectionMoins()"><img src="../../../assets/svg/arrow-left-square-fill.svg" alt="Retour" width="35" height="35" class="m-2"></button>
+    </div>
+    <div class="col-10">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <app-pokedex-item *ngFor="let pokemon of selectionPokemon" [pokemonItem]="pokemon"></app-pokedex-item>
+        </div>
+    </div>
+    <div class="col-1 d-flex justify-content-center">
+        <button [disabled]="compteurPokemonMax >= 152" (click)="selectionPlus()"><img src="../../../assets/svg/arrow-right-square-fill.svg" alt="Avancer" width="35" height="35" class="m-2"></button>
+
+    </div>
+
+</div>

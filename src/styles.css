@@ -1,5 +1,66 @@
 @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
 
+.bg-grass{
+  background-color: rgb(56,191,75);
+}
+
+.bg-fire{
+  background-color: rgb(255,151,65);
+}
+
+.bg-water{
+  background-color: rgb(51,147,221);
+}
+
+.bg-normal{
+  background-color: rgb(146,155,163);
+}
+
+.bg-bug{
+  background-color: rgb(131,195,0);
+}
+
+.bg-poison{
+  background-color: rgb(182,103,207);
+}
+
+.bg-electric{
+  background-color: rgb(251,210,0);
+}
+
+.bg-ground{
+  background-color: rgb(233,115,51);
+}
+
+.bg-psychic{
+  background-color: rgb(255,102,118);
+}
+
+.bg-fighting{
+  background-color: rgb(225,44,106);
+}
+
+.bg-fairy{
+  background-color: rgb(251,138,236);
+}
+
+.bg-rock{
+  background-color: rgb(201,183,135);
+}
+
+.bg-ghost{
+  background-color: rgb(76,106,178);
+}
+
+.bg-ice{
+  background-color: rgb(75,210,193);
+}
+
+.bg-dragon{
+  background-color: rgb(0,111,201);
+}
+
+
 .font-pokemon{
   font-family: "Pokemon";
 }

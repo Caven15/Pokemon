@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { StartComponent } from './components/start/start.component';
 import { PokedexComponent } from './components/pokedex/pokedex.component';
+import { PokedexItemComponent } from './components/pokedex-item/pokedex-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     StartComponent,
-    PokedexComponent
+    PokedexComponent,
+    PokedexItemComponent
   ],
   imports: [
     BrowserModule,
