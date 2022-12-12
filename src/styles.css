@@ -1,5 +1,10 @@
 @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
 
+*{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .bg-grass{
   background-color: rgb(56,191,75);
 }
@@ -64,8 +69,6 @@
   background-color: rgb(81, 87, 93);
 }
 
-
-
 .font-pokemon{
   font-family: "Pokemon";
 }
@@ -120,4 +123,106 @@ body {
 
 .lt-spacing-5{
   letter-spacing: 10px;
+}
+
+.animations-pickachu{
+  z-index: -1;
+  background-image: url(../src/assets/gif/giphy.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  animation-name: move-pikachu;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-pikachu {
+  0%   { left:-30%; top:80%;}
+  100%  { left:130%; top:80%;}
+}
+
+.animations-salameche{
+  z-index: -1;
+  background-image: url(../src/assets/gif/sala.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 450px;
+  height: 350px;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+
+  animation-name: move-salameche;
+}
+
+@keyframes move-salameche {
+  0%   { left:1%; top:59%;}
+  100%  { left:1%; top:59%;}
+}
+
+.animations-dracofeu{
+  z-index: -1;
+  background-image: url(../src/assets/gif/draco_2.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 450px;
+  height: 350px;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+
+  animation-name: move-dracofeu;
+}
+
+@keyframes move-dracofeu {
+  0%    { left:-20%; top:-10%;}
+  25%   { top: 0%;}
+  50%   { top:-10%;}
+  75%   { top: 0%;}
+  100%  { left:120%; top:-10%;}
+}
+
+.animations-dracofeu-reverse{
+  animation-delay: 6s;
+  z-index: -1;
+  background-image: url(../src/assets/gif/draco_3.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 500px;
+  height: 350px;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+
+  animation-name: move-dracofeu-reverse;
+}
+
+@keyframes move-dracofeu-reverse {
+  0%    { left:140%; top:30%;}
+  25%   { top: 20%;}
+  50%   { top: 30%;}
+  75%   { top: 20%;}
+  100%  { left:-40%; top:30%;}
+}
+
+.animations-team{
+  animation-delay: 2s;
+  z-index: -1;
+  background-image: url(../src/assets/gif/animated-pokemon-image-0012.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 450px;
+  height: 350px;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+
+  animation-name: move-team;
+}
+
+@keyframes move-team {
+  0%   { left:120%; top:65%;}
+  100%  { left:-30%; top:65%;}
 }
