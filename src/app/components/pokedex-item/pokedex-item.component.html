@@ -1,4 +1,4 @@
-<a (click)="goto(pokemonItem.Id)">
+<a type="button" (click)="goto(pokemonItem.Id)">
   <div class="card m-2 bg-{{pokemonItem.Types[0]}} border border-dark border-3" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-5 d-flex justify-content-center align-items-center p-1 bg-black">
@@ -6,7 +6,7 @@
       </div>
       <div class="col-md-7">
         <div class="card-body d-flex justify-content-center">
-          <h3 class="card-title font-pokemon mt-5 mb-5">{{pokemonItem.Id}}#  {{pokemonItem.Nom}}</h3>
+          <h3 class="card-title font-pokemon mt-5 mb-5 text-white lt-spacing-1">{{pokemonItem.Id}}#  {{pokemonItem.Nom}}</h3>
         </div>
       </div>
     </div>

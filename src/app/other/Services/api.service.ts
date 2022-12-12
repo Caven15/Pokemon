@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { pokemon} from 'src/app/models/pokemon/pokemon.model';
+import { statistique } from 'src/app/models/pokemon/statistique.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +26,29 @@ export class ApiService {
     return pokemon
   }
 
+  getSpeciesById(id : number){
+    let pokemon = this._http.get<any>(`${this.baseUrl}/pokemon-species/${id}/`)
+    return pokemon
+  }
+
+
+
   loadAllFromApi(){
     for (let i = 1; i < this.NB_POKEMON +1; i++) {
+      let descFr : string[] = []
+      let nameFr = ""
+      this.getSpeciesById(i).subscribe({
+        next : (datas) => {
+          nameFr = datas.names[4].name
+            for (let j = 0; j < 70; j++) {
+              if (datas.flavor_text_entries[j].language.name == "fr") {
+                if (!descFr.includes(datas.flavor_text_entries[j].flavor_text)) {
+                  descFr.push(datas.flavor_text_entries[j].flavor_text)
+                }
+              }
+            }
+        }
+      })
       this.getById(i).subscribe({
         next : (datas) => {
 
@@ -41,9 +63,9 @@ export class ApiService {
           // Constuctions de l'objet pokemon
           let pokemon : pokemon = {
             Id : datas.id,
-            Nom : datas.name,
-            Taille : datas.height,
-            Poids : datas.weight,
+            Nom : nameFr,
+            Taille : (datas.height < 100 ? datas.height/10 : datas.height),
+            Poids : (datas.weight < 1000 ? datas.weight/10 : datas.weight),
             Experience : datas.base_experience,
             Lien_image : datas.sprites.other.dream_world.front_default,
             Types : pokemonTypes,
@@ -55,7 +77,7 @@ export class ApiService {
               Defense_speciale : datas.stats[4].base_stat,
               Vitesse : datas.stats[5].base_stat
             },
-            Description : []
+            Description : descFr
           }
 
           // console.log(pokemon)
@@ -77,6 +99,27 @@ export class ApiService {
     return this.listePokemon[id]
   }
 
+  // loadFrenchDataToApi(){
+  //   for (let i = 1; i < this.NB_POKEMON +1; i++) {
+  //     this.getSpeciesById(i).subscribe({
+  //       next : (datas) => {
+  //         let desc : string[] = []
+  //         console.log(this.listePokemon[datas.id].Nom)
+  //         if (datas.id == this.listePokemon[datas.id]) {
+  //           console.log(datas.id)
+  //           this.listePokemon[datas.id].Nom = datas.names[4].name
+  //           for (let j = 0; j < 95; j++) {
+  //             if (datas.flavor_text_entries[j].language.name == "fr") {
+  //               desc.push(datas.flavor_text_entries[j].flavor_text)
+  //             }
+  //           }
+  //           this.listePokemon[datas.id].Description = desc
+  //         }
+  //       }
+  //     })
+  //   }
+  // }
+
   viewAllPokemon(){
     this.listePokemon.forEach(element => {
       console.log(`${element.Id} : ${element.Nom}`)
@@ -85,5 +128,17 @@ export class ApiService {
 
   getAllPokemons() : pokemon[]{
     return this.listePokemon
+  }
+
+  getMaxValueByStats() : any{
+    let stat : any = {
+      Vie : "255",
+      Attaque : "190",
+      Defense : "250",
+      Attaque_speciale : "194",
+      Defense_speciale : "250",
+      Vitesse : "200"
+    }
+    return stat
   }
 }

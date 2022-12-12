@@ -18,8 +18,10 @@ export class PokedexDetailComponent implements OnInit {
 
   id = this._activatedRoute.snapshot.params['id']
   pokemon : pokemon = this._pokeApi.getOne(this.id)
+  stat : any = this._pokeApi.getMaxValueByStats()
 
   ngOnInit(): void {
+    console.log(this.stat)
   }
 
 }

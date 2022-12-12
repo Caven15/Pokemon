@@ -10,6 +10,7 @@ import { StartComponent } from './components/start/start.component';
 import { PokedexComponent } from './components/pokedex/pokedex.component';
 import { PokedexItemComponent } from './components/pokedex-item/pokedex-item.component';
 import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-detail.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-deta
     PokedexDetailComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule,

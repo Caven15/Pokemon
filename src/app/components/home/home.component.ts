@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
 constructor( private _pokeService : ApiService) { }
 
   ngOnInit(): void {
-    this._pokeService.viewAllPokemon()
   }
 
 

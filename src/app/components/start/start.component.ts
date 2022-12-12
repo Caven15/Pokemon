@@ -13,6 +13,7 @@ export class StartComponent implements OnInit {
 
   ngOnInit(): void {
     this._pokeApi.loadAllFromApi()
+    // this._pokeApi.loadFrenchDataToApi()
   }
 
 

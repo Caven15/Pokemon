@@ -1,10 +1,82 @@
 <div class="vh-100 d-flex justify-content-center align-items-center">
-    <div class="col-11 d-flex justify-content-center bg-black">
+    <div class="col-11 d-flex justify-content-center bg-black rounded-5 border border-dark border-5 h-75">
         <div class="col-6">
-            <img src="{{pokemon.Lien_image}}" style="min-width: 700px; min-height: 700px; max-width: 500px; max-height: 500px;" alt="image pokemon">
+            <div class="row">
+                <div class="d-flex justify-content-center align-items-center mt-2 mb-2">
+                    <img src="{{pokemon.Lien_image}}" style="min-width: 520px; min-height: 520px; max-width: 500px; max-height: 500px;" alt="image pokemon">
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                    <div class="bg-fond rounded-5 m-3 border border-dark border-1">
+                        <h2 class=" d-flex justify-content-center bg-{{pokemon.Types[0]}} font-pokemon lt-spacing-1 rounded-1">Descriptions</h2>
+                        <h3 class="text-center font-pokemon text-white lt-spacing-2 mb-2">{{pokemon.Description[0]}}</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-6">
-
+        <div class="col-6 bg-{{pokemon.Types[0]}} rounded-5">
+            <div class="row">
+                <h1 class="font-pokemon d-flex justify-content-center mt-4">{{pokemon.Nom}}</h1>
+            </div>
+            <div class="row p-2">
+                <h4 class="d-flex justify-content-center font-pokemon mt-4">Caractéristiques</h4>
+                <div class="col-6">
+                    <div class="d-flex justify-content-center">
+                        <h4 class="font-pokemon">Id : {{pokemon.Id}}</h4>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        <h4 class="font-pokemon">Taille : {{pokemon.Taille}} m</h4>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        <h4 class="font-pokemon">Poids : {{pokemon.Poids}} Kg</h4>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex justify-content-center mt-3">
+                        <h4 class="font-pokemon">Experience : {{pokemon.Experience}}</h4>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        <h4 class="font-pokemon">Type primaire : {{pokemon.Types[0]}}</h4>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        <h4 class="font-pokemon">Type secondaire : {{pokemon.Types[1]}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-3">
+                <h4 class="d-flex justify-content-center font-pokemon">Statistiques</h4>
+                <div class="p-1">
+                    <div class="progress border border-dark border-1" style="height: 45px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated font-pokemon bg-{{pokemon.Types[0]}} fs-6 text-dark" role="progressbar" [style.width]="(100 * pokemon.Statistiques.Vie / stat.Vie)+'%'">Vie {{pokemon.Statistiques.Vie}}</div>
+                    </div>
+                </div>
+                <div class="p-1">
+                    <div class="progress border border-dark border-1" style="height: 45px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated font-pokemon bg-{{pokemon.Types[0]}} fs-6 text-dark" role="progressbar" [style.width]="(100 * pokemon.Statistiques.Attaque / stat.Attaque)+'%'">Att {{pokemon.Statistiques.Attaque}}</div>
+                    </div>
+                </div>
+                <div class="p-1">
+                    <div class="progress border border-dark border-1" style="height: 45px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated font-pokemon bg-{{pokemon.Types[0]}} fs-6 text-dark" role="progressbar" [style.width]="(100 * pokemon.Statistiques.Defense / stat.Defense)+'%'">Def {{pokemon.Statistiques.Defense}}</div>
+                    </div>
+                </div>
+                <div class="p-1">
+                    <div class="progress border border-dark border-1" style="height: 45px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated font-pokemon bg-{{pokemon.Types[0]}} fs-6 text-dark" role="progressbar" [style.width]="(100 * pokemon.Statistiques.Attaque_speciale / stat.Attaque_speciale)+'%'">Def-s {{pokemon.Statistiques.Attaque_speciale}}</div>
+                    </div>
+                </div>
+                <div class="p-1">
+                    <div class="progress border border-dark border-1" style="height: 45px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated font-pokemon bg-{{pokemon.Types[0]}} fs-6 text-dark" role="progressbar" [style.width]="(100 * pokemon.Statistiques.Defense_speciale / stat.Defense_speciale)+'%'">Att-s {{pokemon.Statistiques.Defense_speciale}}</div>
+                    </div>
+                </div>
+                <div class="p-1">
+                    <div class="progress border border-dark border-1" style="height: 45px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated font-pokemon bg-{{pokemon.Types[0]}} fs-6 text-dark" role="progressbar" [style.width]="(100 * pokemon.Statistiques.Vitesse / stat.Vitesse)+'%'">Vit {{pokemon.Statistiques.Vitesse}}</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

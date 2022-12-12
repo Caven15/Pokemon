@@ -60,6 +60,11 @@
   background-color: rgb(0,111,201);
 }
 
+.bg-fond{
+  background-color: rgb(81, 87, 93);
+}
+
+
 
 .font-pokemon{
   font-family: "Pokemon";
@@ -97,6 +102,22 @@ body {
 
 }
 
-.fs-pokemon{
+.lt-spacing-1{
+  letter-spacing: 2px;
+}
 
+.lt-spacing-2{
+  letter-spacing: 4px;
+}
+
+.lt-spacing-3{
+  letter-spacing: 6px;
+}
+
+.lt-spacing-4{
+  letter-spacing: 8px;
+}
+
+.lt-spacing-5{
+  letter-spacing: 10px;
 }
