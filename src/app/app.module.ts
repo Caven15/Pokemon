@@ -11,6 +11,7 @@ import { PokedexComponent } from './components/pokedex/pokedex.component';
 import { PokedexItemComponent } from './components/pokedex-item/pokedex-item.component';
 import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-detail.component';
 import { CommonModule } from '@angular/common';
+import { OptionsComponent } from './components/options/options.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CommonModule } from '@angular/common';
     StartComponent,
     PokedexComponent,
     PokedexItemComponent,
-    PokedexDetailComponent
+    PokedexDetailComponent,
+    OptionsComponent
   ],
   imports: [
     CommonModule,
