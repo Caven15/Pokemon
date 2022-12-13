@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/other/Services/api.service';
+import { AudioService } from 'src/app/other/Services/audio.service';
 
 @Component({
   selector: 'app-start',
@@ -9,12 +10,13 @@ import { ApiService } from 'src/app/other/Services/api.service';
 })
 export class StartComponent implements OnInit {
 
-  constructor(private _pokeApi : ApiService) { }
+  constructor(
+    private _audio : AudioService
+    ) { }
 
   ngOnInit(): void {
-    this._pokeApi.loadAllFromApi()
-    // this._pokeApi.loadFrenchDataToApi()
   }
-
-
+  playBtn(){
+    this._audio.playaudioButton()
+  }
 }

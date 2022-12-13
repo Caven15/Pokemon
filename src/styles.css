@@ -99,7 +99,7 @@
 
 body {
   height: 100vh;
-  background-image: url("./assets/jpg/nature_day.jpg");
+  background-image: url("./assets/images/jpg/nature_day.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -127,7 +127,7 @@ body {
 
 .animations-pickachu{
   z-index: -1;
-  background-image: url(../src/assets/gif/giphy.gif);
+  background-image: url(../src/assets/images/gif/giphy.gif);
   background-repeat: no-repeat;
   background-position: center;
   width: 200px;
@@ -145,7 +145,7 @@ body {
 
 .animations-salameche{
   z-index: -1;
-  background-image: url(../src/assets/gif/sala.gif);
+  background-image: url(../src/assets/images/gif/sala.gif);
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -164,7 +164,7 @@ body {
 
 .animations-dracofeu{
   z-index: -1;
-  background-image: url(../src/assets/gif/draco_2.gif);
+  background-image: url(../src/assets/images/gif/draco_2.gif);
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -187,7 +187,7 @@ body {
 .animations-dracofeu-reverse{
   animation-delay: 6s;
   z-index: -1;
-  background-image: url(../src/assets/gif/draco_3.gif);
+  background-image: url(../src/assets/images/gif/draco_3.gif);
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -210,7 +210,7 @@ body {
 .animations-team{
   animation-delay: 2s;
   z-index: -1;
-  background-image: url(../src/assets/gif/animated-pokemon-image-0012.gif);
+  background-image: url(../src/assets/images/gif/animated-pokemon-image-0012.gif);
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
