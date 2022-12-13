@@ -1,7 +1,7 @@
 
-<div class="animations-team"></div>
-<div class="animations-salameche"></div>
-<div class=" animations-pickachu"></div>
-<div class="animations-dracofeu"></div>
-<div class="animations-dracofeu-reverse"></div>
+<div *ngIf="animationTeam" class="animations-team"></div>
+<div *ngIf="animationSala" class="animations-salameche"></div>
+<div *ngIf="animationPika" class=" animations-pickachu"></div>
+<div *ngIf="animationDraco" class="animations-dracofeu"></div>
+<div *ngIf="animationDracoR" class="animations-dracofeu-reverse"></div>
 <router-outlet></router-outlet>

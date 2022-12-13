@@ -5,11 +5,32 @@ import { Injectable } from '@angular/core';
 })
 export class OptionsService {
 
-  animationsTeam : boolean = false;
-  animationsSalameche : boolean = false;
-  animationsPikachu : boolean = false;
-  animationsDracaufeu : boolean = false;
-  animationsDracaufeuReverse : boolean = false;
+  animationTeam : boolean = false
+  animationSala : boolean = false
+  animationPika : boolean = false
+  animationDraco : boolean = false
+  animationDracoR : boolean = false
 
   constructor() { }
+
+  moveStatAnimationTeam(){
+    console.log(this.animationTeam)
+    this.animationTeam = !this.animationTeam
+  }
+
+  moveStatanimationSala(){
+    this.animationSala = !this.animationSala
+  }
+
+  moveStatanimationPika(){
+    this.animationPika = !this.animationPika
+  }
+
+  moveStatanimationDraco(){
+    this.animationDraco = !this.animationDraco
+  }
+
+  moveStatanimationDracoR(){
+    this.animationDracoR = !this.animationDracoR
+  }
 }

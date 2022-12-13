@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { pokemon } from 'src/app/models/pokemon/pokemon.model';
 import { ApiService } from 'src/app/other/Services/api.service';
+import { AudioService } from 'src/app/other/Services/audio.service';
 
 @Component({
   selector: 'app-pokedex',
@@ -10,7 +11,10 @@ import { ApiService } from 'src/app/other/Services/api.service';
 export class PokedexComponent implements OnInit {
 
 
-  constructor(private _pokeService : ApiService) { }
+  constructor(
+    private _pokeService : ApiService,
+    private _audio : AudioService
+    ) { }
 
   pokemons : pokemon[] = this._pokeService.getAllPokemons()
   selectionPokemon : pokemon[] = []
@@ -22,18 +26,20 @@ export class PokedexComponent implements OnInit {
   }
 
   selectionPlus(){
+    this.playBtn()
     this.compteurPokemonMin += 12
     this.compteurPokemonMax += 12
-    console.log(this.compteurPokemonMin)
-    console.log(this.compteurPokemonMax)
     this.selectionPokemon = this.pokemons.slice(this.compteurPokemonMin,this.compteurPokemonMax)
   }
 
   selectionMoins(){
+    this.playBtn()
     this.compteurPokemonMin -= 12
     this.compteurPokemonMax -= 12
-    console.log(this.compteurPokemonMin)
-    console.log(this.compteurPokemonMax)
     this.selectionPokemon = this.pokemons.slice(this.compteurPokemonMin,this.compteurPokemonMax)
+  }
+
+  playBtn(){
+    this._audio.playaudioButton()
   }
 }

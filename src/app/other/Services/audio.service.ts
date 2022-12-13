@@ -14,6 +14,12 @@ export class AudioService {
     "../../../assets/sound/musiques-villes/lavanville.mp3",
     "../../../assets/sound/musiques-villes/azuria.mp3",
     "../../../assets/sound/musiques-villes/celadopole.mp3",
+    "../../../assets/sound/batiments/casino.mp3",
+    "../../../assets/sound/batiments/centre.mp3",
+    "../../../assets/sound/batiments/manoir.mp3",
+    "../../../assets/sound/batiments/repere(teamrocket).mp3",
+    "../../../assets/sound/batiments/silphesarl.mp3",
+    "../../../assets/sound/batiments/tourspectre.mp3",
   ]
   public audio = new Audio();
   public audioTurn : boolean = true
@@ -41,6 +47,7 @@ export class AudioService {
   playaudioButton(){
     let btnAudio = new Audio();
     btnAudio.src = "../../../assets/sound/divers/buttonPokemon.mp3"
+    btnAudio.volume = 0.1
     btnAudio.load();
     btnAudio.play();
   }
